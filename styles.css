@@ -170,3 +170,36 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
 @media(max-width:640px){
   .resume-card{flex-direction:column;align-items:flex-start}
 }
+
+.credentials-rich{grid-template-columns:repeat(3,1fr)}
+.credentials-rich .credential-card{min-height:190px}
+.more-credentials{margin-top:22px}
+.more-credentials summary{
+  cursor:pointer;
+  color:var(--accent);
+  font-weight:700;
+  padding:12px 0;
+  list-style:none;
+}
+.more-credentials summary::-webkit-details-marker{display:none}
+.more-credentials[open] summary{margin-bottom:14px}
+.credential-roadmap{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+  margin-top:22px;
+}
+.credential-roadmap>div{
+  border:1px dashed rgba(83,224,184,.35);
+  border-radius:14px;
+  padding:22px;
+  background:rgba(83,224,184,.035);
+}
+.credential-roadmap h3{margin:10px 0 6px}
+.credential-roadmap p{margin:0;color:#9fb0be}
+@media(max-width:900px){
+  .credentials-rich{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .credentials-rich,.credential-roadmap{grid-template-columns:1fr}
+}
